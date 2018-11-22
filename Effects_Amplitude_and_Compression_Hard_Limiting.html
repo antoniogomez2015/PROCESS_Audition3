@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+
+Tutorial:
+_________
+
+    005 - Limpieza y filtrado, Parte 01.
+        https://www.youtube.com/watch?v=f7ThEYQWOz0
+
+
+
+        
+Hard Limit:
+___________
+
+    _éste efecto nos permitirá aumentar la amplitud de los decibeles del audio comprimido para que así, podamos obtener una mayor ganancia del sonido
+
+    _pero a su vez, manteniendo un contro predefinido del alcance y los límites de la ganancia en relación a unos límites determinados por nosotros para garantizar un resultado satisfactorio
+
+
+Características:
+________________
+
+    _el audio "comienza" y se representa en el espectro de decibeles en valores que van desde cero (+/-), positvo y negativo en sus extremos "superior (+), e inferior (-)", hasta el infinito "el cuál, es el centro de la onda"
+
+    _donde el valor mínimo audible será de "0", cero, por ésta razón uno de los valores más recomendados para configurar el espectro del audio será de "-1", para garantizar un rango audible más aceptable y seguro
+
+    _de ésta manera, evitaremos saturaciones indeseadas
+
+
+
+    Settings:
+    _________
+
+    _de ésta manera, para aplicar éste efecto podremos seleccionar una parte del audio ó no e ir ha "Effects/Amplitude and Compression", y una vez allí, aplicar el efecto de "Hard Limit", en cualquiera de sus dos versiones en las cuáles encontraremos los siguientes parámetros:
+
+
+    _Limit Max Amplitude to:
+
+        _(máximo límite de amplitud), nos permitirá indicar el alcance máximo en decibeles del audio
+
+        _para lo cuál, lo más recomendable es medir los picos del espectro del wareframe, del audio más constantes para observar así, cuando decibeles son necesario en la gráfica ha alcanzar 
+
+        _desde el punto más recurrente de los picos del audio hasta llevar ha "0", ó "-1"
+
+        _donde el rango audible máximo es de "0", de ésta manera, indicaremos un valor "-1", para garantizar que estamos bajo el rango aceptable mínimo antes de "0", tanto positivo como negativo
+
+
+    _Boot input by:
+
+        _(entrada de arranque por), éste valor nos permitirá indicar la ganancia en decibeles ha aplicar y alcanzar sobre el audio respectivamente
+
+        _de ésta manera, lo más recomendable es indicar un rango máximo de decibeles de "17", más "1", ó "-1", nos dará un todal de "18", que es el rango audible máximo para el ser humano
+
+        _de ésta maenra, completaremos el especto de audio ideal para el ser humano logrando así, una ganancia óptima para nuestro audio
+
+        
+
+    _Lock ahead Time:
+        
+        _(Tiempo de bloqueo por delante)
+
+
+    _Reliase Time:
+
+        _(Tiempo de liberación)
+
+
+
+-->
+    
+</body>
+</html>

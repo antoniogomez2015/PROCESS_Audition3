@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+
+Tutorial:
+_________
+
+    014 Fundamentos de Audio 01 Velocidad de Muestreo
+        https://www.youtube.com/watch?v=s2hk3AGEKag
+
+
+
+
+Sample Rate:
+____________
+
+    _la veolocidad de muestro  ó sample rate, nos permitirá determinar la resolución ó la calidad del audio a grabar ó ha intepretar por ejemplo, en un remuestreo de audio en una interpolación de un formato ha otro, etc
+
+    _de ésta manera, la representación de audio se basa en puntos de sampleo ó puntos de referencia que en su conjunto conformarán una gráfica ó wavefrome  de audio de "tiempo sobre amplitud"
+
+    _de éste manera, entre mayor cantidad de puntos de sampleo obtendremos una mayor resolución ó definición del audio ha nivel general
+
+    _de ésta manera, el softweare, marcará puntos de referencia los cuáles al uniirse darán referencia de "voltaje sobre tiempo", a las bocinas para recostruir el sonido
+
+        _de ésta manera, un punto de referencia indicará la información de una cantidad de amplitud ó decibeles en un tiempo/espacio determinado tanto en el canal derecho ó el canal izquierdo respectivamente
+
+
+
+    Baja Resolución:
+    ________________
+
+    _de ésta manera, cuando tenemos un audio grabado ó convertido en baja resolución ó con bajos puntos de sampleo ó muestras cercanas ha "6000 hz", ó 6000, muestras por segundos ó hercios "hz"
+
+    _el audio resultante perderá frecuencias altas ó agudas ó brillo, lo cuál, ocurre por que al dibujar la curva entre los puntos de referencia generados, la curva generada será muy abructa al haber pocos puntos de referencia 
+    
+    _y por lo tanto mucha acutancia ó poca información para dibujar una curva suvizada ó interpolada que forme picos definitos 
+    
+    _más por el contrario, en éste caso se generará picos ó crestas truncadas opacando el sonido resultante
+
+
+    Alta Resolución:
+    ________________
+
+    _más cuando grabamos un audio con un sapleo superior ó mínimo de "44100 hz", obtendremos un audio con un espectro de decibeles mucho más ámplico 
+    
+    _el cuál, contemplará el audio existente en las frecuancias altas ó agudas, pasando por las frecuencias medias y bajar
+
+    _registrado así, dcibeles desde "0 db", hasta el rango máximo audibles de "17000 db", decibeles y superiores
+
+    _lo cuál, nos pemritirá generar un espectro de audio completo para el ser humano y mucho más armónica y reconocible
+
+    _ya que al haber muchas más muestras el sistema podrá generar curvas de interpolación del audio mucho más fluidas y definidas lo cuál, permitirá hacer curvas ó crestas mucho más altas y nunca truncadas ó limitadas en su espectro ó expresión
+
+    _de ésta manera, ha modo de ferencia si seleccionamos un segundo del audio en el panel edición y nos acercamos 
+    
+    _podremos ver que en la selección de un segundo habrán literalmente "44100", puntos de sampleo ó punnos de referencia a través, de los cuales
+    
+    _se ha conformado el waveframe, del audio en la gráfico del audio respectivo
+
+
+Estándares:
+___________
+
+    _de ésta manera, podremos encontrar que los CDs, de audio están grabados ha "44.100 hz"
+
+    _y que los archivos y producciones de video están grabados ha "48.000 hz"
+
+    _y que los DVDs, están grabados ha "96.000 hz"
+
+    _y que algunos estudios profesionales graban ha "192.000 hz"
+
+    _más el estandar que tiene un mejor aquilibrio entre calidad y dinifición y peso del archivo resultante es "44.100 hz"
+
+        _ya que un archivo de audio grabado ha "44.100 hz", ha "16bit", en "estereo", y con una duración de "un minuto", éste tendrá un peso de "10mb", de espacio en disco
+
+
+
+-->
+    
+</body>
+</html>
