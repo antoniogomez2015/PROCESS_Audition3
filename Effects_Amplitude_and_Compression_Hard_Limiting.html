@@ -16,15 +16,18 @@ _________
     005 - Limpieza y filtrado, Parte 01.
         https://www.youtube.com/watch?v=f7ThEYQWOz0
 
+    ¿Qué es un compresor? | Audition | Tutorial en español
+	    https://www.youtube.com/watch?v=Oqh_0eCCzyQ
+
 
 
         
 Hard Limit:
 ___________
 
-    _éste efecto nos permitirá aumentar la amplitud de los decibeles del audio comprimido para que así, podamos obtener una mayor ganancia del sonido
+    _éste efecto nos permitirá tanto aumentar como disminuir la amplitud de los decibeles del audio comprimido para que así, podamos obtener una ganancia personalizada del sonido
 
-    _pero a su vez, manteniendo un contro predefinido del alcance y los límites de la ganancia en relación a unos límites determinados por nosotros para garantizar un resultado satisfactorio
+    _pero a su vez, manteniendo un control predefinido del alcance y los límites de la ganancia en relación a unos límites determinados por nosotros para garantizar un resultado satisfactorio
 
 
 Características:
@@ -32,9 +35,60 @@ ________________
 
     _el audio "comienza" y se representa en el espectro de decibeles en valores que van desde cero (+/-), positvo y negativo en sus extremos "superior (+), e inferior (-)", hasta el infinito "el cuál, es el centro de la onda"
 
-    _donde el valor mínimo audible será de "0", cero, por ésta razón uno de los valores más recomendados para configurar el espectro del audio será de "-1", para garantizar un rango audible más aceptable y seguro
+    _donde el valor mínimo audible para el ser humano será es de "0", cero, por ésta razón uno de los valores más recomendados para configurar el espectro del audio será de "-1" 
+    
+        para garantizar un rango audible más aceptable y seguro y que se encuentre por debajo del límite que es cero "0"
 
     _de ésta manera, evitaremos saturaciones indeseadas
+
+
+
+Definición de Compresión:
+_________________________
+
+    _un compresor tiene como finalidad principal atacar los picos de saturación del sonido
+
+    _de ésta manera, en cualquier plugins, compresor dispondremos de cuatro herramientas fundamentales, las cuáles son:
+
+        Threshol:
+        _________
+
+            _éste parámetro es el umbral de niveles de decibeles a partir del cuál, el efecto comenzará ha trabajar
+
+            _de ésta manera, podremos indicar un umbral de trabajo por ejemplo; de "-12", decibeles el cuál, hará de trigger, ó disparador a partir del cuál, el efecto comenzará ha trabajar cuando los picos de las ondas alcancen la cantidad de -12, decibeles
+
+
+        Ratio:
+        ______
+
+            _el parámetro del ratio se da valores de proporción, de ésta manera, existen proporciones de "2:1", "3:1", "4:1",...
+
+            _por ejemplo; si indicamos un valores de "3:1", ésto quiere decir que el plugins analizará los picos que pasen de "-12", decibeles que fue el umbral que indicamos en el paso anterior
+
+                _de ésta manera, si un pico ha pasado los "-12 db", y ha llegado por ejemplo, ha "-6 db"
+
+                _entonces en éste caso, el plugin, dejará pasar sólo un tercio de esa frecuencia excedente ya que hemos indicado un radio de "3:1", es decir, que pasará "uno db de tres db", lo que se traduce en éste caso "dos db de seis db", para conformar un tercio de frecuencias excedente de "-12 db"
+
+                _de ésta manera, ésto creará una curva de interpolación de corte de frecuencias en relación al umbral y ratio indicado para la generación de la compresión
+
+                _lo cuál, puede traducirse que entre mayor el "ratio", menor será la interpolación entre las curvas de frecuencias generadas y la cantidad de frecuencia excedente permitida
+
+                    _lo cuál, a su vez, puede afectar en compresiones muy extremas y forzadas, en éstos casos es más recomendable indicar un ratio lo más bajo posible
+
+            _de ésta maenra, podremos definir que el ratio, será que cantidad ó que tan fuerte será la compresión del audio
+
+
+        Attack:
+        _______
+
+            _el ataque es la rapidez con la que actua el compresor cuando aparezcan los picos excedentes de audio (cuando la señal supere el umbral indicado
+
+
+        Release:
+        _________
+
+            _la liberación marca la velocidad con que el compresor deja de actuar sobre la señal una vez que está, despues de haber un poco de señal excedente, ha bajado ya del nivel del umbral (cuando ya no necesita ser comprimida),si es corto, la señal caerá de nivel más rapidamente con un valor más alto
+
 
 
 
@@ -44,18 +98,18 @@ ________________
     _de ésta manera, para aplicar éste efecto podremos seleccionar una parte del audio ó no e ir ha "Effects/Amplitude and Compression", y una vez allí, aplicar el efecto de "Hard Limit", en cualquiera de sus dos versiones en las cuáles encontraremos los siguientes parámetros:
 
 
-    _Limit Max Amplitude to:
+    _Limit Max Amplitude to: (Threshold)
 
-        _(máximo límite de amplitud), nos permitirá indicar el alcance máximo en decibeles del audio
+        _(máximo límite de amplitud), nos permitirá indicar el umbral a partir del cuá, el efecto comenzará ha trabajar en el análisis del audio para la limitación posterior
 
-        _para lo cuál, lo más recomendable es medir los picos del espectro del wareframe, del audio más constantes para observar así, cuando decibeles son necesario en la gráfica ha alcanzar 
+        _para lo cuál, lo más recomendable es medir los picos del espectro del waveframe, del audio más constantes para observar así, cuál, es el patrón de amplitud de nuestro audio más estable y natural ó peso del audio
 
-        _desde el punto más recurrente de los picos del audio hasta llevar ha "0", ó "-1"
+        _de ésta manera, desde el punto más recurrente de los picos del audio hasta llevar ha "0", ó "-1"
 
         _donde el rango audible máximo es de "0", de ésta manera, indicaremos un valor "-1", para garantizar que estamos bajo el rango aceptable mínimo antes de "0", tanto positivo como negativo
 
 
-    _Boot input by:
+    _Boot input by: (Amplitud "db")
 
         _(entrada de arranque por), éste valor nos permitirá indicar la ganancia en decibeles ha aplicar y alcanzar sobre el audio respectivamente
 
@@ -63,16 +117,18 @@ ________________
 
         _de ésta maenra, completaremos el especto de audio ideal para el ser humano logrando así, una ganancia óptima para nuestro audio
 
+        NOTA: ésto en el caso de que desiemos realizar un cambio ó ajuste en la amplitud del audio, más en la mayoría de los casos sólo requeriremos la compresión sin afectar la amplitud del audio, ya que éste paso por lo general lo realizaremos tras el proceso de normalización del audio
+
         
 
-    _Lock ahead Time:
+    _Lock ahead Time: (Attack)
         
-        _(Tiempo de bloqueo por delante)
+        _(Tiempo de bloqueo por delante), velocidad de respuesta en aplicar el plugins, tras pasar el límite del umbral indicado
 
 
-    _Reliase Time:
+    _Reliase Time: (Release)
 
-        _(Tiempo de liberación)
+        _(Tiempo de liberación), velocidad de liberación ó de dejar de aplicar el plugins, tras bajar un pico de frecuencia del umbral indicado
 
 
 
