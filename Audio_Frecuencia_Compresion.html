@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+
+Tutorial:
+_________
+
+    005 - Limpieza y filtrado, Parte 01.
+        https://www.youtube.com/watch?v=f7ThEYQWOz0
+
+    ¿Qué es un compresor? | Audition | Tutorial en español
+        https://www.youtube.com/watch?v=Oqh_0eCCzyQ
+        
+    Introducción a la compresión (gráfico de un Compresor)
+        https://www.youtube.com/watch?v=tD9N3aUf2C4
+
+
+
+        
+
+Compresión:
+___________
+
+
+
+    
+Características:
+________________
+
+    _el audio "comienza" y se representa en el espectro de decibeles en valores que van desde cero (+/-), positvo y negativo en sus extremos "superior (+), e inferior (-)", hasta el infinito "el cuál, es el centro de la onda"
+
+    _donde el valor mínimo audible para el ser humano será es de "0", cero, por ésta razón uno de los valores más recomendados para configurar el espectro del audio será de "-1" 
+    
+        para garantizar un rango audible más aceptable y seguro y que se encuentre por debajo del límite que es cero "0"
+
+    _de ésta manera, evitaremos saturaciones indeseadas
+
+
+
+Definición de Compresión:
+_________________________
+
+    _un compresor tiene como finalidad principal atacar los picos de saturación del sonido
+
+    _de ésta manera, en cualquier plugins, compresor dispondremos de cuatro herramientas fundamentales, las cuáles son:
+
+        Threshol:
+        _________
+
+            _éste parámetro es el umbral de niveles de decibeles a partir del cuál, el efecto comenzará ha trabajar
+
+            _de ésta manera, podremos indicar un umbral de trabajo por ejemplo; de "-12", decibeles el cuál, hará de trigger, ó disparador a partir del cuál, el efecto comenzará ha trabajar cuando los picos de las ondas alcancen la cantidad de -12, decibeles
+
+
+        Ratio:
+        ______
+
+            _el parámetro del ratio se da valores de proporción, de ésta manera, existen proporciones de "2:1", "3:1", "4:1",...
+
+            _por ejemplo; si indicamos un valores de "3:1", ésto quiere decir que el plugins analizará los picos que pasen de "-12", decibeles que fue el umbral que indicamos en el paso anterior
+
+                _de ésta manera, si un pico ha pasado los "-12 db", y ha llegado por ejemplo, ha "-6 db"
+
+                _entonces en éste caso, el plugin, dejará pasar sólo un tercio de esa frecuencia excedente ya que hemos indicado un radio de "3:1", es decir, que pasará "uno db de tres db", lo que se traduce en éste caso "dos db de seis db", para conformar un tercio de frecuencias excedente de "-12 db"
+
+                _de ésta manera, ésto creará una curva de interpolación de corte de frecuencias en relación al umbral y ratio indicado para la generación de la compresión
+
+                _lo cuál, puede traducirse que entre mayor el "ratio", menor será la interpolación entre las curvas de frecuencias generadas y la cantidad de frecuencia excedente permitida
+
+                    _lo cuál, a su vez, puede afectar en compresiones muy extremas y forzadas, en éstos casos es más recomendable indicar un ratio lo más bajo posible
+
+            _de ésta maenra, podremos definir que el ratio, será que cantidad ó que tan fuerte será la compresión del audio
+
+
+        Attack:
+        _______
+
+            _el ataque es la rapidez con la que actua el compresor cuando aparezcan los picos excedentes de audio (cuando la señal supere el umbral indicado
+
+
+        Release:
+        _________
+
+            _la liberación marca la velocidad con que el compresor deja de actuar sobre la señal una vez que está, despues de haber un poco de señal excedente, ha bajado ya del nivel del umbral (cuando ya no necesita ser comprimida),si es corto, la señal caerá de nivel más rapidamente con un valor más alto
+
+
+
+Gráfico de un Compresor:
+________________________
+
+    _el gráfico que representa mejor la funcíon de un compresor, se presenta e ejes cartesianos
+
+    _que representan al nivel de entrada en el eje "X", y al nivel de salida en eje "Y", donde ambas escalas son representadas en decibelios
+
+    _donde la función más simple que encontramos está representada por dos rectas en un punto medio del gráfico ó punto neutro
+
+    _la primera es una recta diagonal, que nos trasmite la misma intensidad de entrada hacia la salida, es decir, que tenemos "8 db", a la entrada tendremos "8 db", a la salida
+
+
+    Workflow:
+    _________
+
+    _más si de entrada tenemos un valor menor, ej, "6 db", entonces en éste caso ya no tendremos "6 db", a la salida
+
+    _si no que en vez de eso tendremos "-2 db", en la salida, por uqe la señan no alcanzaría en su longitud para llevar al mismo valor de entrada, si no que habrá un decaimiento de la señal
+
+
+    
+    Parámetros del Gráfico:
+    _______________________
+
+    _Threshold: éste corresponderá al punto ó vertice de unión entre las dos líneas tanto de entrada como de salida del gráfico
+
+        _de ésta manera, aquella señal que pase el punto de umbral será comprimida
+
+        _de ésta manera, un threshold, de "0 db", equivaldrá a colocar el compresor en "bypass", lo cuál, se traduce en una línea recta diagonal en el gráfico
+
+    _Ratio: el ratio, estará representado por la inclinación de la segunda recta la cuál, determinará el nivel de compresión
+
+        _donde la relación "1:1", equivale a colocar el compresor en "bypass", ó en una recta diagonal perfecta
+
+        _si la entrada excede en dos decibelios el umbral y observamos que la señal a la salida lo supera en tan sólo un decibelio, entonces decimos que la relación de decileios es de "2:1"
+
+        _de ésta manera, cuanto  mayor sea la inclinación ó pendiente de la segunda línea del gráfico, mayor será la realción de compresión conseguida
+
+        _cuando la pendiente es completamente plana u horizontal de la segunda línea, decimos que el radio de "infinido : 1", (infinito a uno (1)), ó también se le llama limitador, pues la señal queda recortada al no poder pasar el valor marcado por el umbral
+
+
+    _Ganancia de Compensación: éste amplifica la señal a priori de ser comprimida
+    
+
+
+
+-->
+    
+</body>
+</html>
