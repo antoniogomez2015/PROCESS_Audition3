@@ -80,7 +80,7 @@ __________
             Decibeles:
             __________
                 
-                _de ésta manera, dispondremos de uns slider, a través, del cuál, podremos controlar ó ajustar los decibeles de compresión ó ganancia
+                _de ésta manera, dispondremos de uns slider, a través, del cuál, podremos controlar ó ajustar el umbral de decibeles de compresión ó ganancia
 
             Threshold:
             __________
@@ -90,12 +90,12 @@ __________
             Gain:
             _____
 
-                _a través, de éste parámetro podremos indicar la ganancia extra ha aplicar por banda
+                _a través, de éste parámetro podremos aumentar o cortar la amplitud después de la compresión
 
             Ratio:
             ______
 
-                _a través, de éste parámetro podremos indicar el radio ó fracción de compresión
+                _a través, de éste parámetro, ratio ó proporción podremos definir una proporción de compresión entre 1-a-1 y 30-a-1
 
             Attack:
             _______
@@ -112,12 +112,23 @@ __________
     Output Gain:
     ____________
 
-        _éste parámetro nos permitirá aplicar una ganancia adicional a nivel global para todas las bandas al unísono para así, podemos ajustar los decibeles del audio resultante
+        _éste parámetro nos permitirá aumentar o cortar el nivel de salida global después de la compresión. 
+        
+        _los valores posibles están comprendidos entre -18 y +18 dB, siendo 0 la ganancia unitaria 
+        
+        _haga doble clic en los medidores para restablecer los indicadores de pico y clip
 
         
     Limiter:
     ________
 
+        _éstos aplican límites después de la ganancia de salida y al final del trazado de la señal, con lo que se optimizan los niveles generales
+        
+        _especifique ajustes de Umbral, Ataque y Liberaración, que son menos agresivos que los ajustes específicos de cada banda similares 
+        
+        _a continuación, especifique un ajuste Margen para determinar el techo absoluto relacionado con 0 dBFS
+
+        
         _Threshold:
 
             _a través, de éste parámetro podremos indicar el umbral de compresión ha aplicar de modo global a todas las bandas
@@ -135,20 +146,27 @@ __________
             _a través, de éste parámetro podremos indicar la velocidad de liberación del efecto cuando éste sale del umbral indicado
 
 
+
     Options:
     ________
 
         _Spectrum on Input:
 
-            _
+            _muestra en el gráfico multibanda el espectro de frecuencia de la señal de entrada, en lugar del de la señal de salida 
+            
+            _para comprobar rápidamente la cantidad de compresión aplicada a cada banda, active o desactive esta opción
 
         _Brikwall Limiter:
 
-            _
+            _aplica limitación inmediata y forzada al ajuste y Margen actual
+            
+            _(anule la selección de esta opción para aplicar límites suaves más lentos que suenan con más suavidad pero que pueden superar el ajuste de Margen)
+
+            Nota: el tiempo máximo de ataque para los límites “brickwall” es de 5ms
 
         _Link Band Controls:
 
-            _
+            _permiten definir globalmente los ajustes de compresión de todas las bandas pero mantienen diferencias relativas entre bandas
 
 
 
