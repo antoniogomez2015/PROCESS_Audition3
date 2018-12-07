@@ -13,7 +13,9 @@
 Tutorial:
 _________
 
-    _
+    _05.- Curso Adobe Audition: Aplicar Efectos al audi
+        https://www.youtube.com/watch?v=VRGCTos33SY&list=PL74F0F29E325A3000&index=5
+
 
 
 
@@ -23,9 +25,18 @@ _____________
 
     _éste efecto nos permitirá amplicar ó reducir la amplitud ó ganancia del audio
 
-    _con la característica especial de poder hacer ajustes de garando tanto para los canales unificados que conforman el estereo como también, para canales independientes
+    _con la característica especial de poder hacer ajustes de "envelope", ó envolvente ó "fading", del audio tanto para su punto de entrada como para su punto de salida respectivamente en una selección de audio determinada
+    
+    _y puede aplicar tanto para los canales unificados que conforman el estereo como también, para canales independientes ó mono
 
-    _lo que nos permitirá poder ajustar ó modificar un canal más que otro ó incluso dinámicamente a través, del tiempo
+    _lo que nos permitirá poder ajustar ó modificar un canal más que otro ó incluso dinámicamente a través, del tiempo a través, de las automatizaciones
+
+    _más también, tendremos la posibilidad de poder hacer ajustes del decentramientro de la onda ó wavefrom, del audio en relación al punto "0", cero ó central de la onda de audio
+
+        _para que así, podamos hacer correcciones del decentramientro del audio por canales independientes ó canales unificados
+
+        NOTA: lo cuál, determinará el comportamiento del decentramiento del audio para futuras ó próximas grabaciones de audio
+
 
 
 Workflow:
@@ -38,9 +49,163 @@ _________
 Controles:
 __________
 
-   Left Gain:
+
+   Amplification:
+   ______________
     
-        _éste parámetro nos permitirá 
+        Left:
+        _____
+
+            _éste parámetro nos pemritirá ajustar ó hacer variaciones en el canal izquierdo del audio, tanto ampliación como disminución de la amplitud del audio a través, de un slider de control
+
+
+        Right:
+        ______
+
+            __éste parámetro nos pemritirá ajustar ó hacer variaciones en el canal derecho del audio, tanto ampliación como disminución de la amplitud del audio a través, de un slider de control
+
+
+    Fade:
+    _____
+
+        Initial Amplification:
+        ______________________
+
+            Left:
+            _____
+
+                _éste parámetro nos permitirá poder hacer fade, ó envelope del nivel de la amplitud del audio de entrada 
+                
+                _de una selección del canal izquierdo respectivamente
+
+
+            Right:
+            ______
+
+                _éste parámetro nos permitirá poder hacer fade, ó envelope del nivel de la amplitud del audio de entrada 
+                
+                _de una selección del canal derecho respectivamente
+
+
+        Final Amplification:
+        ____________________
+
+            Left:
+            _____
+
+                _éste parámetro nos permitirá poder hacer fade, ó envelope del nivel de la amplitud del audio de salida
+                
+                _de una selección del canal izquierdo respectivamente
+
+
+            Right:
+            ______
+
+                _éste parámetro nos permitirá poder hacer fade, ó envelope del nivel de la amplitud del audio de salida 
+                
+                _de una selección del canal derecho respectivamente
+
+
+        Linear Fades:
+
+            _éste parámetro nos permitirá determinar si deseamos dividir la longitud de frecuencias del audio de forma lineal en fragmentos de 1000, kilohercios
+
+
+        Logaritmic Fades:
+
+            _éste parámetro nos permitirá determinar si deseamos dividir la longitud de frecuencias del audio de forma logarítmica, en éste caso, en diez fragmentos
+
+
+    Presets:
+    ________
+
+        _ésta lista de presets, nos pemritirá utilizar pre configuraciones para la mayoría de los casos más comúnes de procesos de paso contínuo
+
+
+    Enable Preroll and Postroll Preview:
+    ____________________________________
+
+        _éste parámetro nos permitirá determinar si deseamos la activación de preroll y postroll, es decir, que si deseamos escuchar parte del audio que precede y que sigue a la sección de audio respectiva
+
+
+    DC Bias:
+    ________
+
+        DC Bias Adjust:
+        _______________
+
+            _éste parámetro nos pemritirá activar las opciones de descentramiento de la onda ó wavefrom
+            
+
+            Left:
+            _____
+
+                _éste parámetro nos pemritirá determinar el desface ó desplazamiento del waveframe, de audio para el canal izquierdo en éste caso
+
+
+            Right:
+            ______
+
+                _éste parámetro nos pemritirá determinar el desface ó desplazamiento del waveframe, de audio para el canal derecho en éste caso
+
+
+            Absolute:
+            _________
+
+                _éste parámetro permite determinar un calculo absoluto entre ambos canales, centrándolos como si fuesen un sólo canal sin importar si éstos tienen un desface previo por canal independiente
+
+                _ésta opción es especialmente útil para conservar algún desface por canal previo y hacer así, un pos-ajuste
+
+
+            Differential:
+            _____________
+
+                _éste parámetro permite determinar el calculo de forma independiente para cada canal lo que garantizará el ajuste a cero por canal sin importar desplazaminetos previos por canal
+                
+
+
+            Find Zero Now:
+                
+                _éste parámetro nos pemritirá determinar de forma automática cuál, es el punto central para cada canal 
+                
+                _para que así, podamos centrar de forma perfecta ambos canales por separada y con el ajuste correcto
+
+        
+        Calculate Normalization Values:
+        _______________________________
+
+            Peak Level db:
+            ______________
+
+                _éste parámetro nos permitirá determinar el valor máximo para la detección de picos de audio para la normalización de audio
+
+
+            _Calculate Now:
+
+                _éste parámetro nos pemritirá realizar el calculo de y normalización de audio una vez hemos configurado el parámetro anterior
+
+
+        _View all Setting in db:
+
+            _al activar éste parámetro podremos visualizar todos los valores de ajuste tanto de amplitud como de fade, en valor en decibeles
+
+            _más si desactivamos ésta oción podremos ver los respectivos valores en porcentajes
+
+
+        _Lock Left/Right:
+
+            _éste parámetro permitirá desactivar temporalmente la edición del canal derecho para que así, la edición de ambos canales se realize de forma conjunta ó enlazada entre ambos canales a la vez
+
+
+    _Bypass:
+
+        _éste parámetro nos pemritirá activar y desactivar el plugins, de forma temporal para que así, podamos audicionar el audio con y sin la aplicación del efecto y poder comparar entre ambos audios
+
+
+
+
+
+
 
 
 
